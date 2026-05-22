@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="favicon.ico">
+<meta name="description" content="Devendra Tiwari Full Stack Developer Portfolio">
+<meta name="keywords" content="PHP Developer, Laravel Developer, Full Stack Developer">
 <title>Devendra Tiwari | Full Stack Developer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -426,9 +429,18 @@ body>*:not(.glow){position:relative;z-index:1}
 <section id="resume" class="section-wrap">
   <div class="section-header">
     <div class="section-eyebrow">Background</div>
+
     <h2 class="section-title">Resume</h2>
-    <p class="section-desc">Education, experience, and the journey that shaped my craft.</p>
-  </div>
+
+    <p class="section-desc">
+      Education, experience, and the journey that shaped my craft.
+    </p>
+
+    <a href="resume.pdf" download class="btn-gold" 
+       style="display:inline-block;margin-top:20px;">
+       Download CV
+    </a>
+</div>
   <div class="resume-grid">
     <div class="timeline-col">
       <h3>Education</h3>
@@ -656,15 +668,27 @@ body>*:not(.glow){position:relative;z-index:1}
         </div>
       </div>
     </div>
-    <form class="contact-form" onsubmit="handleSubmit(event)">
-      <div class="form-row">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-      </div>
-      <input type="text" placeholder="Subject">
-      <textarea placeholder="Tell me about your project…"></textarea>
-      <button type="submit" class="form-submit">Send Message</button>
-    </form>
+    <form class="contact-form" action="https://formsubmit.co/devendratiwari748@gmail.com" method="POST">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <input type="hidden" name="_next" value="https://Devendra07Tiwari.github.io/portfolio/">
+
+    <div class="form-row">
+      <input type="text" name="name" placeholder="Your name" required>
+      
+      <input type="email" name="email" placeholder="Your email" required>
+    </div>
+
+    <input type="text" name="subject" placeholder="Subject">
+
+    <textarea name="message" placeholder="Tell me about your project…"></textarea>
+
+    <button type="submit" class="form-submit">
+      Send Message
+    </button>
+
+  </form>
   </div>
 </section>
 
@@ -674,7 +698,7 @@ body>*:not(.glow){position:relative;z-index:1}
   <!-- <span>Built with HTML · CSS · JS</span> -->
 </footer>
 
-<script>
+<!-- <script>
 function handleSubmit(e){
   e.preventDefault();
   const btn=e.target.querySelector('button');
@@ -682,6 +706,6 @@ function handleSubmit(e){
   btn.style.background='#4ade80';
   setTimeout(()=>{btn.textContent='Send Message';btn.style.background='';e.target.reset();},3000);
 }
-</script>
+</script> -->
 </body>
 </html>
