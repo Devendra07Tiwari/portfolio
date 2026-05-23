@@ -668,27 +668,51 @@ body>*:not(.glow){position:relative;z-index:1}
         </div>
       </div>
     </div>
-    <form class="contact-form" action="https://formsubmit.co/devendratiwari748@gmail.com" method="POST">
+    <form class="contact-form" 
+        action="https://formsubmit.co/devendratiwari748@gmail.com" 
+        method="POST">
 
-    <input type="hidden" name="_captcha" value="false">
+  <!-- Disable captcha -->
+  <input type="hidden" name="_captcha" value="false">
 
-    <input type="hidden" name="_next" value="https://devendra07tiwari.github.io/devendra-portfolio/success.html">
+  <!-- Website Name -->
+  <input type="hidden" name="_websitename" value="Devendra Portfolio">
 
-    <div class="form-row">
-      <input type="text" name="name" placeholder="Your name" required>
-      
-      <input type="email" name="email" placeholder="Your email" required>
-    </div>
+  <!-- Email Subject -->
+  <input type="hidden" name="_subject" 
+  value="New Portfolio Contact Request">
 
-    <input type="text" name="subject" placeholder="Subject">
+  <!-- Success Redirect -->
+  <input type="hidden" name="_next" 
+  value="https://devendra07tiwari.github.io/devendra-portfolio/success.html">
 
-    <textarea name="message" placeholder="Tell me about your project…"></textarea>
+  <div class="form-row">
 
-    <button type="submit" class="form-submit">
-      Send Message
-    </button>
+    <input type="text" 
+    name="name" 
+    placeholder="Your name" 
+    required>
 
-  </form>
+    <input type="email" 
+    name="email" 
+    placeholder="Your email" 
+    required>
+
+  </div>
+
+  <input type="text" 
+  name="subject" 
+  placeholder="Subject">
+
+  <textarea 
+  name="message" 
+  placeholder="Tell me about your project…"></textarea>
+
+  <button type="submit" class="form-submit">
+    Send Message
+  </button>
+
+</form>
   </div>
 </section>
 
