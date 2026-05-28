@@ -271,6 +271,66 @@ body>*:not(.glow){position:relative;z-index:1}
   .about-grid,.resume-grid,.contact-grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
+.proj-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:24px;
+  background:#17171f;
+  transition:0.4s ease;
+  text-decoration:none;
+  color:#fff;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+.proj-image{
+  height:240px;
+  background-size:cover;
+  background-position:top;
+  position:relative;
+  transition:0.5s ease;
+}
+
+.proj-image::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.75)
+  );
+}
+
+.proj-content{
+  padding:24px;
+}
+
+.proj-card:hover .proj-image{
+  transform:scale(1.05);
+}
+
+.proj-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.35);
+}
+
+.proj-name{
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+
+.proj-desc{
+  line-height:1.7;
+  color:#cfcfd6;
+  margin-bottom:18px;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:28px;
+}
 </style>
 </head>
 <body>
@@ -492,84 +552,296 @@ body>*:not(.glow){position:relative;z-index:1}
   </div>
 
   <div class="sector-label sector-edu">Education</div>
-  <div class="projects-grid">
-    <a href="https://sruraipur.ac.in/sru/" target="_blank" rel="noopener" class="proj-card">
+  ```html
+<div class="sector-label sector-edu">Education</div>
+
+<div class="projects-grid">
+
+  <!-- SRU -->
+  <a href="https://sruraipur.ac.in/sru/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/sru.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-edu">University</span>
+
       <div class="proj-name">SRU Raipur</div>
-      <div class="proj-desc">Shri Rawatpura Sarkar University — full institutional website covering admissions, departments, courses, and student portals.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">HTML/CSS</span></div>
+
+      <div class="proj-desc">
+        Shri Rawatpura Sarkar University institutional platform with admissions,
+        departments, courses, faculty modules, and student portal management.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">HTML/CSS</span>
+      </div>
+
       <span class="proj-link">Visit live site →</span>
-    </a>
-    <a href="https://sscnbhilai.com/sscn/" target="_blank" rel="noopener" class="proj-card">
+
+    </div>
+
+  </a>
+
+  <!-- SSCN -->
+  <a href="https://sscnbhilai.com/sscn/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/sscn.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-edu">Nursing College</span>
+
       <div class="proj-name">SSCN Bhilai</div>
-      <div class="proj-desc">Shri Shankaracharya College of Nursing — site with admission enquiries, gallery, grievance portal, anti-ragging committee, and ERP integration.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span></div>
+
+      <div class="proj-desc">
+        Nursing college platform with admission enquiry system, grievance portal,
+        ERP integration, anti-ragging management, and gallery modules.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+
       <span class="proj-link">Visit live site →</span>
-    </a>
-    <a href="https://holyheartsraipur.com/" target="_blank" rel="noopener" class="proj-card">
+
+    </div>
+
+  </a>
+
+  <!-- Holy Hearts -->
+  <a href="https://holyheartsraipur.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/holyheart.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-edu">School</span>
+
       <div class="proj-name">Holy Hearts Raipur</div>
-      <div class="proj-desc">School website with academics overview, events, admissions section, and parent communication features.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span></div>
-      <span class="proj-link">Visit live site →</span>
-    </a>
-  </div>
 
-  <div class="sector-label sector-travel">Tour & Travel</div>
-  <div class="projects-grid">
-    <a href="https://www.beyondyatra.com/" target="_blank" rel="noopener" class="proj-card">
+      <div class="proj-desc">
+        School website featuring academics, admissions, events,
+        notices, and parent communication workflows.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+        <span class="tech-tag">JavaScript</span>
+      </div>
+
+      <span class="proj-link">Visit live site →</span>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+<div class="sector-label sector-travel">Tour & Travel</div>
+
+<div class="projects-grid">
+
+  <!-- Beyond Yatra -->
+  <a href="https://www.beyondyatra.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/beyondyatra.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-travel">Travel Platform</span>
+
       <div class="proj-name">Beyond Yatra</div>
-      <div class="proj-desc">Tour and travel booking platform featuring curated packages, detailed itineraries, and customer enquiry workflows.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span></div>
+
+      <div class="proj-desc">
+        Travel booking platform featuring curated packages,
+        booking workflows, itineraries, and enquiry management.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
       <span class="proj-link">Visit live site →</span>
-    </a>
-    <a href="https://rahultravels.com/" target="_blank" rel="noopener" class="proj-card">
+
+    </div>
+
+  </a>
+
+  <!-- Rahul Travels -->
+  <a href="https://rahultravels.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/rahultravels.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-travel">Taxi Booking</span>
+
       <div class="proj-name">Rahul Travels</div>
-      <div class="proj-desc">One-way taxi booking platform for Raipur Airport routes with real-time offer management, prime membership, driver registration, and admin panel.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">Payment Gateway</span><span class="tech-tag">REST API</span></div>
+
+      <div class="proj-desc">
+        One-way taxi booking platform with airport routes,
+        membership system, offer engine, and driver workflows.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">Payment Gateway</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
       <span class="proj-link">Visit live site →</span>
-    </a>
-    
-    <a href="https://www.tripstogather.com/" target="_blank" rel="noopener" class="proj-card">
+
+    </div>
+
+  </a>
+
+  <!-- Tripstogather -->
+  <a href="https://www.tripstogather.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/tripstogather.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-travel">Group Travel</span>
+
       <div class="proj-name">Tripstogather</div>
-      <div class="proj-desc">Group travel marketplace for browsing and booking shared tour packages, with social features for collaborative trip planning.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span></div>
-      <span class="proj-link">Visit live site →</span>
-    </a>
-  </div>
 
-  <div class="sector-label sector-ecom">E-commerce</div>
-  <div class="projects-grid">
-    <a href="https://www.girletrend.com/" target="_blank" rel="noopener" class="proj-card">
+      <div class="proj-desc">
+        Collaborative travel marketplace for discovering,
+        planning, and booking shared tour experiences.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
+      <span class="proj-link">Visit live site →</span>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+<div class="sector-label sector-ecom">E-commerce</div>
+
+<div class="projects-grid">
+
+  <!-- GirleTrend -->
+  <a href="https://www.girletrend.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/girletrend.jpg')"></div>
+
+    <div class="proj-content">
+
       <span class="proj-badge badge-ecom">Fashion E-commerce</span>
+
       <div class="proj-name">Girle Trend</div>
-      <div class="proj-desc">Fashion e-commerce platform with product catalogues, cart, checkout, payment gateway integration, and full order management system.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span><span class="tech-tag">Payment Gateway</span></div>
-      <span class="proj-link">Visit live site →</span>
-    </a>
-    <a href="https://knotmecute.com/" target="_blank" rel="noopener" class="proj-card">
-      <span class="proj-badge badge-ecom">Fashion E-commerce</span>
-      <div class="proj-name">Knot Me cute</div>
-      <div class="proj-desc">Knot Me Cute is a modern fashion and accessories e-commerce platform offering trendy handcrafted collections, smooth product browsing, secure checkout, payment integration, and an easy-to-manage shopping experience.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">Laravel</span><span class="tech-tag">MySQL</span><span class="tech-tag">Payment Gateway</span></div>
-      <span class="proj-link">Visit live site →</span>
-    </a>
-  </div>
 
-  <div class="sector-label sector-hrms">HRMS SaaS</div>
-  <div class="projects-grid">
-    <a href="https://iaudithrm.com/" target="_blank" rel="noopener" class="proj-card">
-      <span class="proj-badge badge-hrms">HRMS Platform</span>
-      <div class="proj-name">iAudit HRM</div>
-      <div class="proj-desc">Smart HR & payroll SaaS platform with employee handbook, leave management, attendance lens, ERP integration, multi-tier pricing, and demo scheduling.</div>
-      <div class="proj-tech"><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">REST API</span><span class="tech-tag">AWS</span></div>
+      <div class="proj-desc">
+        Modern fashion e-commerce platform with shopping cart,
+        checkout workflows, secure payments, and order management.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">Payment Gateway</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
       <span class="proj-link">Visit live site →</span>
-    </a>
-  </div>
+
+    </div>
+
+  </a>
+
+  <!-- Knot Me Cute -->
+  <a href="https://knotmecute.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/knotmecute.jpg')"></div>
+
+    <div class="proj-content">
+
+      <span class="proj-badge badge-ecom">Fashion Store</span>
+
+      <div class="proj-name">Knot Me Cute</div>
+
+      <div class="proj-desc">
+        Fashion and accessories shopping platform with smooth browsing,
+        optimized checkout, and responsive shopping experience.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">Laravel</span>
+        <span class="tech-tag">PHP</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
+      <span class="proj-link">Visit live site →</span>
+
+    </div>
+
+  </a>
+
+</div>
+
+
+<div class="sector-label sector-hrms">HRMS SaaS</div>
+
+<div class="projects-grid">
+
+  <!-- iAudit -->
+  <a href="https://iaudithrm.com/" target="_blank" class="proj-card">
+
+    <div class="proj-image"
+         style="background-image:url('images/iaudithrm.jpg')"></div>
+
+    <div class="proj-content">
+
+      <span class="proj-badge badge-hrms">HRMS Platform</span>
+
+      <div class="proj-name">iAudit HRM</div>
+
+      <div class="proj-desc">
+        Smart HRMS SaaS platform with payroll, attendance,
+        ERP integration, employee management, and reporting modules.
+      </div>
+
+      <div class="proj-tech">
+        <span class="tech-tag">REST API</span>
+        <span class="tech-tag">AWS</span>
+        <span class="tech-tag">MySQL</span>
+      </div>
+
+      <span class="proj-link">Visit live site →</span>
+
+    </div>
+
+  </a>
+
+</div>
+```
+
 </section>
 
 <hr class="divider">
